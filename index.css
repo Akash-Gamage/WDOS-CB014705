@@ -1,0 +1,45 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero img {
+    justify-content: center;
+    display: flex;
+    width: fit-content;
+}
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+.hero p {
+    font-size: 24px;
+}
+
+.content {
+    padding: 40px 20px;
+}
+.content h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.games, .news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.game, .news-item {
+    background-color: #2a2a2a;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+.game img, .news-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+.game h3, .news-item h3 {
+    margin: 10px 0;
+}

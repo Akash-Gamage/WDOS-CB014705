@@ -1,0 +1,25 @@
+/* Add to existing CSS */
+.queries form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.queries label {
+    font-weight: bold;
+}
+
+.queries input, .queries textarea {
+    padding: 10px;
+    border: 1px solid rgb(3, 205, 1);
+    background-color: black;
+    color: white;
+}
+
+.queries button {
+    background-color: rgb(3, 205, 1);
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
