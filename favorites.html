@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Favourites - Gamers Place</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="genaral.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>Gamers Place</h1>
+        <nav>
+          <div class="nav-container">
+            <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="games.html">Games</a></li>
+              <li><a href="upcoming.html">Upcoming Games</a></li>
+              <li><a href="accessories.html">Accessories</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="Items.html">Products</a></li>
+            </ul>
+            <div class="nav-icons">
+              <a href="cart.html" title="View Cart">
+                <img src="./images/Cart logo.png" alt="Cart" class="nav-icon" />
+              </a>
+              <a href="favorites.html" onclick="loadFromFavourites()" title="Apply Favourites">
+                <img src="./images/Favorite.png" alt="Favourites" class="nav-icon" />
+              </a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+  <main>
+    <h2>Saved Favourite Order</h2>
+    
+    <section id="favourite-content">
+      <div id="favourite-empty" style="display: none;">
+        <p>No favourite order saved.</p>
+      </div>
+
+      <table id="favourite-table" style="display: none;">
+        <thead>
+          <tr>
+            <th>Item</th><th>Quantity</th><th>Price</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Total</td>
+            <td id="favourite-total">Rs. 0</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <div id="favourite-buttons" style="display: none; margin-top: 1rem;">
+        <button onclick="applyFavourite()">Apply Favourite to Cart</button>
+        <button onclick="clearFavourite()">Clear Favourite</button>
+      </div>
+    </section>
+  </main>
+
+  <!--footer-->
+  <footer class="footer">
+    <div class="f-container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">affiliate program</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">shipping</a></li>
+            <li><a href="#">returns</a></li>
+            <li><a href="#">order status</a></li>
+            <li><a href="#">payment option</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Online Shop</h4>
+          <ul>
+            <li><a href="#">watch</a></li>
+            <li><a href="#">bag</a></li>
+            <li><a href="#">shoes</a></li>
+            <li><a href="#">dress</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>&copy;2025 GamersPlace. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
