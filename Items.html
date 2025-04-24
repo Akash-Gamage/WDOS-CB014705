@@ -1,370 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Computer Parts Order</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="general.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="genaral.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 </head>
 <body>
-  <header>
-    <h1>Gamers Place</h1>
-    <nav>
-      <div class="nav-container">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="games.html">Games</a></li>
-          <li><a href="upcoming.html">Upcoming Games</a></li>
-          <li><a href="accessories.html">Accessories</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="Items.html">Products</a></li>
-        </ul>
-        <div class="nav-icons">
-          <a href="cart.html" title="View Cart">
-            <img src="./images/Cart logo.png" alt="Cart" class="nav-icon" />
-          </a>
-          <a href="favorites.html" onclick="loadFromFavourites()" title="Apply Favourites">
-            <img src="./images/Favorite.png" alt="Favourites" class="nav-icon" />
-          </a>
-        </div>
+
+<header>
+  <h1>Gamers Place</h1>
+  <nav>
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="upcoming.html">Upcoming Games</a></li>
+        <li><a href="accessories.html">Accessories</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="items.html">Products</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="cart.html" title="View Cart">
+          <img src="./images/Cart logo.png" alt="Cart" class="nav-icon" />
+        </a>
+        <a href="favorites.html" onclick="loadFromFavourites()" title="Apply Favorites">
+          <img src="./images/Favorite.png" alt="Favorites" class="nav-icon" />
+        </a>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 
-  <main>
-    <section id="product-form">
-        <h2>Select Your Parts</h2>
-      
-        <form id="orderForm">
-          <!-- Processors -->
-          <fieldset>
-            <legend>Processors</legend>
-            <div class="item">
-              <img src="./images/Intel Core i9.png" alt="Intel Core i9 14900KS" />
-              <div class="info">
-                <p>Intel Core i9 14900KS (Cores 24 / Threads 32)</p>
-                <p class="price">Rs. 205,000</p>
-                <button onclick="addToCart('Intel Core i9 14900KS', 205000)">Add to Cart</button>
-              </div>
-            </div>
-            
-              
-              <div class="item">
-                <img src=".\images\AMD RYZEN Threadripper 3990X.png" alt="AMD RYZEN Threadripper 3990X" />
-                <div class="info">
-                  <p>AMD RYZEN Threadripper 3990X Processor (Cores 64/Threads 128)</p>
-                  <p class="price">Rs. 1,100,000</p>
-                  <button onclick="addToCart('AMD RYZEN Threadripper 3990X Processor (Cores 64/Threads 128)', 1100000)">Add to Cart</button>                  
-                </div>
-              </div>
+<main>
+  <section id="product-form">
+    <h2>Select Your Parts</h2>
 
-              <div class="item">
-                <img src="./images/Intel Core ULTRA 9.png" alt="Intel Core Ultra 9 285K" />
-                <div class="info">
-                  <p>Intel Core Ultra 9 Processor 285K</p>
-                  <p class="price">Rs. 194,000</p>
-                  <button onclick="addToCart('Intel Core Ultra 9 Processor 285K', 194000)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/AMD RYZEN 9.png" alt="AMD RYZEN 9 9950X" />
-                <div class="info">
-                  <p>AMD RYZEN 9 9950X Processor</p>
-                  <p class="price">Rs. 232,000</p>
-                  <button onclick="addToCart('AMD RYZEN 9 9950X Processor', 232000)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/Intel Core i7.png" alt="INTEL CORE i7 14700F" />
-                <div class="info">
-                  <p>INTEL CORE i7 14700F (Cores 20/Threads 28) Processor</p>
-                  <p class="price">Rs. 157,000</p>
-                  <button onclick="addToCart('INTEL CORE i7 14700F (Cores 20/Threads 28) Processor', 157000)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/AMD RYZEN 7.png" alt="AMD Ryzen 7 9800X3D" />
-                <div class="info">
-                  <p>AMD Ryzen 7 9800X3D (8 Cores/16 Threads)</p>
-                  <p class="price">Rs. 199,000</p>
-                  <button onclick="addToCart('AMD Ryzen 7 9800X3D (8 Cores/16 Threads)', 199000)">Add to Cart</button>
-                </div>
-              </div>
-            
-          </fieldset>
-      
-          <!-- Graphic Cards -->
-          <fieldset>
-            <legend>Graphic Cards</legend>
-            <div class="item">
-                <img src="./images/ASUS ROG RTX 5090.png" alt="ASUS ROG RTX 5090" />
-                <div class="info">
-                  <p>ASUS ROG RTX 5090 Astral 32GB GDDR7</p>
-                  <p class="price">Rs. 1,499,000</p>
-                  <button onclick="addToCart('ASUS ROG RTX 5090 Astral 32GB GDDR7', 1499000)">Add to Cart</button> 
-                </div>
-              </div>
-
-            <div class="item">
-                <img src="./images/MSI RTX 5070 Ti.png" alt="MSI RTX 5070 Ti" />
-                <div class="info">
-                  <p>MSI RTX 5070 Ti 16G Vanguard SOC Launch Edition GDDR7</p>
-                  <p class="price">Rs. 387,000</p>
-                  <button onclick="addToCart('MSI RTX 5070 Ti 16G Vanguard SOC Launch Edition GDDR7', 387000)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/ASUS ROG STRIX RTX 4090.png" alt="ASUS ROG STRIX RTX 4090" />
-                <div class="info">
-                  <p>ASUS ROG STRIX RTX 4090 24GB GAMING OC</p>
-                  <p class="price">Rs. 1,081,000</p>
-                  <button onclick="addToCart('ASUS ROG STRIX RTX 4090 24GB GAMING OC', 1081000)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/MSI RTX™ 4070Ti.png" alt="MSI RTX™ 4070Ti" />
-                <div class="info">
-                  <p>MSI RTX™ 4070Ti GAMING X TRIO 12GB</p>
-                  <p class="price">Rs. 425,000</p>
-                  <button onclick="addToCart('MSI RTX™ 4070Ti GAMING X TRIO 12GB', 425000)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/ASUS TUF RTX 3070TI.png" alt="ASUS TUF RTX 3070TI" />
-                <div class="info">
-                  <p>ASUS TUF RTX 3070TI 8GB GAMING</p>
-                  <p class="price">Rs. 460,000</p>
-                  <button onclick="addToCart('ASUS TUF RTX 3070TI 8GB GAMING', 460000)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/ASUS TUF RTX 3060TI.png" alt="ASUS TUF RTX 3060TI" />
-                <div class="info">
-                  <p>ASUS TUF RTX 3060TI 8GB GAMING OC V2 GRAPHIC CARD</p>
-                  <p class="price">Rs. 269,000</p>
-                  <button onclick="addToCart('ASUS TUF RTX 3060TI 8GB GAMING OC V2 GRAPHIC CARD', 269000)">Add to Cart</button>
-                </div>
-              </div>
-            
-          </fieldset>
-      
-          <!-- Motherboards -->
-          <fieldset>
-            <legend>Motherboards</legend>
-            <div class="item">
-                <img src="./images/MSI MPG Z790 CARBON WIFI DDR5.png" alt="MSI MPG Z790 CARBON WIFI DDR5" />
-                <div class="info">
-                  <p>MSI MPG Z790 CARBON WIFI DDR5 Motherboard</p>
-                  <p class="price">Rs. 173,000</p>
-                  <button onclick="addToCart('MSI MPG Z790 CARBON WIFI DDR5 Motherboard', 173000)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/MSI MAG X670E TOMAHAWK WIFI.png" alt="MSI MAG X670E TOMAHAWK WIFI" />
-                <div class="info">
-                  <p>MSI MAG X670E TOMAHAWK WIFI Motherboard</p>
-                  <p class="price">Rs. 139,000</p>
-                  <button onclick="addToCart('MSI MAG X670E TOMAHAWK WIFI Motherboard', 139000)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/Asus Prime Z790-P WIFI DDR4-CSM.png" alt="Asus Prime Z790-P WIFI DDR4-CSM" />
-                <div class="info">
-                  <p>Asus Prime Z790-P WIFI DDR4-CSM Motherboard</p>
-                  <p class="price">Rs. 122,000</p>
-                  <button onclick="addToCart('Asus Prime Z790-P WIFI DDR4-CSM Motherboard', 122000)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/Asus Tuf Gaming B550M-Plus WIFI II.png" alt="Asus Tuf Gaming B550M-Plus WIFI II" />
-                <div class="info">
-                  <p>Asus Tuf Gaming B550M-Plus WIFI II Motherboard</p>
-                  <p class="price">Rs. 82,000</p>
-                  <button onclick="addToCart('Asus Tuf Gaming B550M-Plus WIFI II Motherboard', 82000)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/Asus Rog Strix Z790-E WIFI II DDR5.png" alt="Asus Rog Strix Z790-E WIFI II DDR5" />
-                <div class="info">
-                  <p>Asus Rog Strix Z790-E WIFI II DDR5 Motherboard</p>
-                  <p class="price">Rs. 209,000</p>
-                  <button onclick="addToCart('Asus Rog Strix Z790-E WIFI II DDR5 Motherboard', 209000)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/MSI B850 Gaming Plus Wifi DDR5.png" alt="MSI B850 Gaming Plus Wifi DDR5" />
-                <div class="info">
-                  <p>MSI B850 Gaming Plus Wifi DDR5 Motherboard</p>
-                  <p class="price">Rs. 94,000</p>
-                  <button onclick="addToCart('MSI B850 Gaming Plus Wifi DDR5 Motherboard', 94000)">Add to Cart</button>
-                </div>
-              </div>
-            
-          </fieldset>
-      
-          <!-- RAM -->
-          <fieldset>
-            <legend>Memory (RAM)</legend>
-            <div class="item">
-                <img src="./images/CORSAIR DOMINATOR TITANIUM RGB 32GB (2X16GB) DDR5 6200MHZ - Intel XMP Desktop Memory.png" alt="CORSAIR DOMINATOR TITANIUM RGB 32GB (2X16GB) DDR5 6200MHZ" />
-                <div class="info">
-                  <p>CORSAIR DOMINATOR TITANIUM RGB 32GB (2X16GB) DDR5 6200MHZ - Intel XMP Desktop Memory</p>
-                  <p class="price">Rs. 66,000</p>
-                  <button onclick="addToCart('CORSAIR DOMINATOR TITANIUM RGB 32GB (2X16GB) DDR5 6200MHZ - Intel XMP Desktop Memory', 66000)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/Thermaltake Toughram XG RGB D5 16GB DDR5 5600MHZ C36 Ram.png" alt="Thermaltake Toughram XG RGB D5 16GB DDR5 5600MHZ C36 Ram" />
-                <div class="info">
-                  <p>Thermaltake Toughram XG RGB D5 16GB DDR5 5600MHZ C36 Ram</p>
-                  <p class="price">Rs. 33,500</p>
-                  <button onclick="addToCart('Thermaltake Toughram XG RGB D5 16GB DDR5 5600MHZ C36 Ram', 33500)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/PNY XLR8 16GB DDR4 3200MHZ - Gaming Ram.png" alt="PNY XLR8 16GB DDR4 3200MHZ - Gaming Ram" />
-                <div class="info">
-                  <p>PNY XLR8 16GB DDR4 3200MHZ - Gaming Ram</p>
-                  <p class="price">Rs. 19,000</p>
-                  <button onclick="addToCart('PNY XLR8 16GB DDR4 3200MHZ - Gaming Ram', 19000)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/Corsair Vengeance RGB 16GB 3600MHZ DDR4 Desktop Ram.png" alt="Corsair Vengeance RGB 16GB 3600MHZ DDR4 Desktop Ram" />
-                <div class="info">
-                  <p>Corsair Vengeance RGB 16GB 3600MHZ DDR4 Desktop Ram</p>
-                  <p class="price">Rs. 14,500</p>
-                  <button onclick="addToCart('Corsair Vengeance RGB 16GB 3600MHZ DDR4 Desktop Ram', 14500)">Add to Cart</button>
-                </div>
-              </div>
-          </fieldset>
-      
-          <!-- Storage -->
-          <fieldset>
-            <legend>Storage Devices</legend>
-            <div class="item">
-                <img src="./images/SEAGATE 16TB NAS IRONWOLF HARD.png" alt="SEAGATE 16TB NAS IRONWOLF HARD" />
-                <div class="info">
-                  <p>SEAGATE 16TB NAS IRONWOLF HARD</p>
-                  <p class="price">Rs. 170,000</p>
-                  <button onclick="addToCart('SEAGATE 16TB NAS IRONWOLF HARD', 170000)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/Transcend 4TB 25H3 USB 3.1 External Hard Drive.png" alt="Transcend 4TB 25H3 USB 3.1 External Hard Drive" />
-                <div class="info">
-                  <p>Transcend 4TB 25H3 USB 3.1 External Hard Drive</p>
-                  <p class="price">Rs. 41,000</p>
-                  <button onclick="addToCart('Transcend 4TB 25H3 USB 3.1 External Hard Drive', 41000)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/SEAGATE 1TB MOBILE HDD LAPTOP HARD DISK ST1000LM035.png" alt="SEAGATE 1TB MOBILE HDD LAPTOP HARD DISK ST1000LM035" />
-                <div class="info">
-                  <p>SEAGATE 1TB MOBILE HDD LAPTOP HARD DISK ST1000LM035</p>
-                  <p class="price">Rs. 17,500</p>
-                  <button onclick="addToCart('SEAGATE 1TB MOBILE HDD LAPTOP HARD DISK ST1000LM035', 17500)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/WD BLACK SN850X 2TB GEN 4 SSD.png" alt="WD BLACK SN850X 2TB GEN 4 NVME 7300/6600 MBPS" />
-                <div class="info">
-                  <p>WD BLACK SN850X 2TB GEN 4 NVME 7300/6600 MBPS</p>
-                  <p class="price">Rs. 89,000</p>
-                  <button onclick="addToCart('WD BLACK SN850X 2TB GEN 4 NVME 7300/6600 MBPS', 89000)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/Lexar 64GB JumpDrive Fingerprint F35USM 3.0 Flash Drive.png" alt="Lexar 64GB JumpDrive Fingerprint F35USM 3.0 Flash Drive" />
-                <div class="info">
-                  <p>Lexar 64GB JumpDrive Fingerprint F35USM 3.0 Flash Drive</p>
-                  <p class="price">Rs. 9,500</p>
-                  <button onclick="addToCart('Lexar 64GB JumpDrive Fingerprint F35USM 3.0 Flash Drive', 9500)">Add to Cart</button>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="./images/Ugreen NVMe Enclosure.png" alt="Ugreen M.2/NVMe Enclosure With Type-c to Type-c Cable" />
-                <div class="info">
-                  <p>Ugreen M.2/NVMe Enclosure With Type-c to Type-c Cable</p>
-                  <p class="price">Rs. 6,000</p>
-                  <button onclick="addToCart('Ugreen M.2/NVMe Enclosure With Type-c to Type-c Cable', 6000)">Add to Cart</button>
-                </div>
-              </div>
-          </fieldset>
-
-        </form>
-      </section>          
-    </main>
-
-    <!--footer-->
-  <footer class="footer">
-    <div class="f-container">
-      <div class="row">
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#">about us</a></li>
-            <li><a href="#">our services</a></li>
-            <li><a href="#">Privacy policy</a></li>
-            <li><a href="#">affiliate program</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Get help</h4>
-          <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">shipping</a></li>
-            <li><a href="#">returns</a></li>
-            <li><a href="#">order status</a></li>
-            <li><a href="#">payment option</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Online Shop</h4>
-          <ul>
-            <li><a href="#">watch</a></li>
-            <li><a href="#">bag</a></li>
-            <li><a href="#">shoes</a></li>
-            <li><a href="#">dress</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Follow us</h4>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <form id="orderForm">
+      <!-- Processors -->
+      <fieldset>
+        <legend>Processors</legend>
+        <div class="item">
+          <img src="./images/Intel Core i9.png" alt="Intel Core i9 14900KS" />
+          <div class="info">
+            <p>Intel Core i9 14900KS (Cores 24 / Threads 32)</p>
+            <p class="price">Rs. 205,000</p>
+            <button onclick="addToCart('Intel Core i9 14900KS', 205000)">Add to Cart</button>
           </div>
+        </div>
+        
+          
+          <div class="item">
+            <img src=".\images\AMD RYZEN Threadripper 3990X.png" alt="AMD RYZEN Threadripper 3990X" />
+            <div class="info">
+              <p>AMD RYZEN Threadripper 3990X Processor (Cores 64/Threads 128)</p>
+              <p class="price">Rs. 1,100,000</p>
+              <button onclick="addToCart('AMD RYZEN Threadripper 3990X Processor (Cores 64/Threads 128)', 1100000)">Add to Cart</button>                  
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/Intel Core ULTRA 9.png" alt="Intel Core Ultra 9 285K" />
+            <div class="info">
+              <p>Intel Core Ultra 9 Processor 285K</p>
+              <p class="price">Rs. 194,000</p>
+              <button onclick="addToCart('Intel Core Ultra 9 Processor 285K', 194000)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/AMD RYZEN 9.png" alt="AMD RYZEN 9 9950X" />
+            <div class="info">
+              <p>AMD RYZEN 9 9950X Processor</p>
+              <p class="price">Rs. 232,000</p>
+              <button onclick="addToCart('AMD RYZEN 9 9950X Processor', 232000)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/Intel Core i7.png" alt="INTEL CORE i7 14700F" />
+            <div class="info">
+              <p>INTEL CORE i7 14700F (Cores 20/Threads 28) Processor</p>
+              <p class="price">Rs. 157,000</p>
+              <button onclick="addToCart('INTEL CORE i7 14700F (Cores 20/Threads 28) Processor', 157000)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/AMD RYZEN 7.png" alt="AMD Ryzen 7 9800X3D" />
+            <div class="info">
+              <p>AMD Ryzen 7 9800X3D (8 Cores/16 Threads)</p>
+              <p class="price">Rs. 199,000</p>
+              <button onclick="addToCart('AMD Ryzen 7 9800X3D (8 Cores/16 Threads)', 199000)">Add to Cart</button>
+            </div>
+          </div>
+        
+      </fieldset>
+  
+      <!-- Graphic Cards -->
+      <fieldset>
+        <legend>Graphic Cards</legend>
+        <div class="item">
+            <img src="./images/ASUS ROG RTX 5090.png" alt="ASUS ROG RTX 5090" />
+            <div class="info">
+              <p>ASUS ROG RTX 5090 Astral 32GB GDDR7</p>
+              <p class="price">Rs. 1,499,000</p>
+              <button onclick="addToCart('ASUS ROG RTX 5090 Astral 32GB GDDR7', 1499000)">Add to Cart</button> 
+            </div>
+          </div>
+
+        <div class="item">
+            <img src="./images/MSI RTX 5070 Ti.png" alt="MSI RTX 5070 Ti" />
+            <div class="info">
+              <p>MSI RTX 5070 Ti 16G Vanguard SOC Launch Edition GDDR7</p>
+              <p class="price">Rs. 387,000</p>
+              <button onclick="addToCart('MSI RTX 5070 Ti 16G Vanguard SOC Launch Edition GDDR7', 387000)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/ASUS ROG STRIX RTX 4090.png" alt="ASUS ROG STRIX RTX 4090" />
+            <div class="info">
+              <p>ASUS ROG STRIX RTX 4090 24GB GAMING OC</p>
+              <p class="price">Rs. 1,081,000</p>
+              <button onclick="addToCart('ASUS ROG STRIX RTX 4090 24GB GAMING OC', 1081000)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/MSI RTX™ 4070Ti.png" alt="MSI RTX™ 4070Ti" />
+            <div class="info">
+              <p>MSI RTX™ 4070Ti GAMING X TRIO 12GB</p>
+              <p class="price">Rs. 425,000</p>
+              <button onclick="addToCart('MSI RTX™ 4070Ti GAMING X TRIO 12GB', 425000)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/ASUS TUF RTX 3070TI.png" alt="ASUS TUF RTX 3070TI" />
+            <div class="info">
+              <p>ASUS TUF RTX 3070TI 8GB GAMING</p>
+              <p class="price">Rs. 460,000</p>
+              <button onclick="addToCart('ASUS TUF RTX 3070TI 8GB GAMING', 460000)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/ASUS TUF RTX 3060TI.png" alt="ASUS TUF RTX 3060TI" />
+            <div class="info">
+              <p>ASUS TUF RTX 3060TI 8GB GAMING OC V2 GRAPHIC CARD</p>
+              <p class="price">Rs. 269,000</p>
+              <button onclick="addToCart('ASUS TUF RTX 3060TI 8GB GAMING OC V2 GRAPHIC CARD', 269000)">Add to Cart</button>
+            </div>
+          </div>
+        
+      </fieldset>
+  
+      <!-- Motherboards -->
+      <fieldset>
+        <legend>Motherboards</legend>
+        <div class="item">
+            <img src="./images/MSI MPG Z790 CARBON WIFI DDR5.png" alt="MSI MPG Z790 CARBON WIFI DDR5" />
+            <div class="info">
+              <p>MSI MPG Z790 CARBON WIFI DDR5 Motherboard</p>
+              <p class="price">Rs. 173,000</p>
+              <button onclick="addToCart('MSI MPG Z790 CARBON WIFI DDR5 Motherboard', 173000)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/MSI MAG X670E TOMAHAWK WIFI.png" alt="MSI MAG X670E TOMAHAWK WIFI" />
+            <div class="info">
+              <p>MSI MAG X670E TOMAHAWK WIFI Motherboard</p>
+              <p class="price">Rs. 139,000</p>
+              <button onclick="addToCart('MSI MAG X670E TOMAHAWK WIFI Motherboard', 139000)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/Asus Prime Z790-P WIFI DDR4-CSM.png" alt="Asus Prime Z790-P WIFI DDR4-CSM" />
+            <div class="info">
+              <p>Asus Prime Z790-P WIFI DDR4-CSM Motherboard</p>
+              <p class="price">Rs. 122,000</p>
+              <button onclick="addToCart('Asus Prime Z790-P WIFI DDR4-CSM Motherboard', 122000)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/Asus Tuf Gaming B550M-Plus WIFI II.png" alt="Asus Tuf Gaming B550M-Plus WIFI II" />
+            <div class="info">
+              <p>Asus Tuf Gaming B550M-Plus WIFI II Motherboard</p>
+              <p class="price">Rs. 82,000</p>
+              <button onclick="addToCart('Asus Tuf Gaming B550M-Plus WIFI II Motherboard', 82000)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/Asus Rog Strix Z790-E WIFI II DDR5.png" alt="Asus Rog Strix Z790-E WIFI II DDR5" />
+            <div class="info">
+              <p>Asus Rog Strix Z790-E WIFI II DDR5 Motherboard</p>
+              <p class="price">Rs. 209,000</p>
+              <button onclick="addToCart('Asus Rog Strix Z790-E WIFI II DDR5 Motherboard', 209000)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/MSI B850 Gaming Plus Wifi DDR5.png" alt="MSI B850 Gaming Plus Wifi DDR5" />
+            <div class="info">
+              <p>MSI B850 Gaming Plus Wifi DDR5 Motherboard</p>
+              <p class="price">Rs. 94,000</p>
+              <button onclick="addToCart('MSI B850 Gaming Plus Wifi DDR5 Motherboard', 94000)">Add to Cart</button>
+            </div>
+          </div>
+        
+      </fieldset>
+  
+      <!-- RAM -->
+      <fieldset>
+        <legend>Memory (RAM)</legend>
+        <div class="item">
+            <img src="./images/CORSAIR DOMINATOR TITANIUM RGB 32GB (2X16GB) DDR5 6200MHZ - Intel XMP Desktop Memory.png" alt="CORSAIR DOMINATOR TITANIUM RGB 32GB (2X16GB) DDR5 6200MHZ" />
+            <div class="info">
+              <p>CORSAIR DOMINATOR TITANIUM RGB 32GB (2X16GB) DDR5 6200MHZ - Intel XMP Desktop Memory</p>
+              <p class="price">Rs. 66,000</p>
+              <button onclick="addToCart('CORSAIR DOMINATOR TITANIUM RGB 32GB (2X16GB) DDR5 6200MHZ - Intel XMP Desktop Memory', 66000)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/Thermaltake Toughram XG RGB D5 16GB DDR5 5600MHZ C36 Ram.png" alt="Thermaltake Toughram XG RGB D5 16GB DDR5 5600MHZ C36 Ram" />
+            <div class="info">
+              <p>Thermaltake Toughram XG RGB D5 16GB DDR5 5600MHZ C36 Ram</p>
+              <p class="price">Rs. 33,500</p>
+              <button onclick="addToCart('Thermaltake Toughram XG RGB D5 16GB DDR5 5600MHZ C36 Ram', 33500)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/PNY XLR8 16GB DDR4 3200MHZ - Gaming Ram.png" alt="PNY XLR8 16GB DDR4 3200MHZ - Gaming Ram" />
+            <div class="info">
+              <p>PNY XLR8 16GB DDR4 3200MHZ - Gaming Ram</p>
+              <p class="price">Rs. 19,000</p>
+              <button onclick="addToCart('PNY XLR8 16GB DDR4 3200MHZ - Gaming Ram', 19000)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/Corsair Vengeance RGB 16GB 3600MHZ DDR4 Desktop Ram.png" alt="Corsair Vengeance RGB 16GB 3600MHZ DDR4 Desktop Ram" />
+            <div class="info">
+              <p>Corsair Vengeance RGB 16GB 3600MHZ DDR4 Desktop Ram</p>
+              <p class="price">Rs. 14,500</p>
+              <button onclick="addToCart('Corsair Vengeance RGB 16GB 3600MHZ DDR4 Desktop Ram', 14500)">Add to Cart</button>
+            </div>
+          </div>
+      </fieldset>
+  
+      <!-- Storage -->
+      <fieldset>
+        <legend>Storage Devices</legend>
+        <div class="item">
+            <img src="./images/SEAGATE 16TB NAS IRONWOLF HARD.png" alt="SEAGATE 16TB NAS IRONWOLF HARD" />
+            <div class="info">
+              <p>SEAGATE 16TB NAS IRONWOLF HARD</p>
+              <p class="price">Rs. 170,000</p>
+              <button onclick="addToCart('SEAGATE 16TB NAS IRONWOLF HARD', 170000)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/Transcend 4TB 25H3 USB 3.1 External Hard Drive.png" alt="Transcend 4TB 25H3 USB 3.1 External Hard Drive" />
+            <div class="info">
+              <p>Transcend 4TB 25H3 USB 3.1 External Hard Drive</p>
+              <p class="price">Rs. 41,000</p>
+              <button onclick="addToCart('Transcend 4TB 25H3 USB 3.1 External Hard Drive', 41000)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/SEAGATE 1TB MOBILE HDD LAPTOP HARD DISK ST1000LM035.png" alt="SEAGATE 1TB MOBILE HDD LAPTOP HARD DISK ST1000LM035" />
+            <div class="info">
+              <p>SEAGATE 1TB MOBILE HDD LAPTOP HARD DISK ST1000LM035</p>
+              <p class="price">Rs. 17,500</p>
+              <button onclick="addToCart('SEAGATE 1TB MOBILE HDD LAPTOP HARD DISK ST1000LM035', 17500)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/WD BLACK SN850X 2TB GEN 4 SSD.png" alt="WD BLACK SN850X 2TB GEN 4 NVME 7300/6600 MBPS" />
+            <div class="info">
+              <p>WD BLACK SN850X 2TB GEN 4 NVME 7300/6600 MBPS</p>
+              <p class="price">Rs. 89,000</p>
+              <button onclick="addToCart('WD BLACK SN850X 2TB GEN 4 NVME 7300/6600 MBPS', 89000)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/Lexar 64GB JumpDrive Fingerprint F35USM 3.0 Flash Drive.png" alt="Lexar 64GB JumpDrive Fingerprint F35USM 3.0 Flash Drive" />
+            <div class="info">
+              <p>Lexar 64GB JumpDrive Fingerprint F35USM 3.0 Flash Drive</p>
+              <p class="price">Rs. 9,500</p>
+              <button onclick="addToCart('Lexar 64GB JumpDrive Fingerprint F35USM 3.0 Flash Drive', 9500)">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/Ugreen NVMe Enclosure.png" alt="Ugreen M.2/NVMe Enclosure With Type-c to Type-c Cable" />
+            <div class="info">
+              <p>Ugreen M.2/NVMe Enclosure With Type-c to Type-c Cable</p>
+              <p class="price">Rs. 6,000</p>
+              <button onclick="addToCart('Ugreen M.2/NVMe Enclosure With Type-c to Type-c Cable', 6000)">Add to Cart</button>
+            </div>
+          </div>
+      </fieldset>
+    </form>
+
+    
+  </section>
+
+  <!-- Order Summary Cart Table -->
+  <section id="order-summary">
+    <h2>Your Cart</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody id="order-table-body"></tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Total</td>
+          <td id="total-price">Rs. 0</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <button onclick="goToCheckout()">Buy Now</button>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="f-container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">affiliate program</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">shipping</a></li>
+          <li><a href="#">returns</a></li>
+          <li><a href="#">order status</a></li>
+          <li><a href="#">payment option</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Online Shop</h4>
+        <ul>
+          <li><a href="#">watch</a></li>
+          <li><a href="#">bag</a></li>
+          <li><a href="#">shoes</a></li>
+          <li><a href="#">dress</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
     </div>
-    <p>&copy;2025 GamersPlace. All rights reserved.</p>
-  </footer>
+  </div>
+  <p>&copy;2025 GamersPlace. All rights reserved.</p>
+</footer>
 
-  <script src="script.js"></script>
+<!--Link JS -->
+<script src="script.js"></script>
 </body>
 </html>
