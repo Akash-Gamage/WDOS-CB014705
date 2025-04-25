@@ -137,3 +137,30 @@ function clearFavourite() {
   alert("Favourite order cleared.");
   location.reload();
 }
+
+
+// ========== DISPLAY ORDER SUMMARY ON CART PAGE ==========
+document.addEventListener("DOMContentLoaded", () => {
+  const summaryTable = document.getElementById("summary-table");
+  const totalSummary = document.getElementById("summary-total");
+
+  if (summaryTable && totalSummary) {
+    let total = 0;
+    summaryTable.innerHTML = "";
+
+    cart.forEach(item => {
+      const subtotal = item.quantity * item.price;
+      total += subtotal;
+
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${item.name}</td>
+        <td>${item.quantity}</td>
+        <td>Rs. ${subtotal.toLocaleString()}</td>
+      `;
+      summaryTable.appendChild(row);
+    });
+
+    totalSummary.textContent = `Rs. ${total.toLocaleString()}`;
+  }
+});
