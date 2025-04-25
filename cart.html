@@ -10,6 +10,7 @@
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <h1>Gamers Place</h1>
     <nav>
@@ -25,7 +26,7 @@
         </ul>
         <div class="nav-icons">
           <a href="cart.html" title="View Cart">
-            <img src="./images/Cart logo.png" alt="Cart" class="nav-icon" />
+            <img src="./images/Cartlogo.png" alt="Cart" class="nav-icon" />
           </a>
           <a href="favorites.html" onclick="loadFromFavourites()" title="Apply Favourites">
             <img src="./images/Favorite.png" alt="Favourites" class="nav-icon" />
@@ -35,6 +36,7 @@
     </nav>
   </header>
 
+  <!-- Main -->
   <main>
     <h2>Your Order</h2>
     <table>
@@ -54,6 +56,7 @@
       </tfoot>
     </table>
 
+    <!-- Checkout Form -->
     <section>
       <h2>Enter Your Details</h2>
       <form id="checkoutForm">
@@ -65,15 +68,15 @@
       </form>
     </section>
 
+    <!-- Confirmation Section -->
     <section id="confirmation" style="display:none;">
       <h2>✅ Thank You for Your Purchase!</h2>
       <p>Your order will be delivered by <span id="delivery-date"></span>.</p>
-      <a href="items.html">
-        <button>Back to Shop</button>
-      </a>
+      <a href="items.html"><button>Back to Shop</button></a>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="f-container">
       <div class="row">
@@ -82,7 +85,7 @@
           <ul>
             <li><a href="#">about us</a></li>
             <li><a href="#">our services</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">privacy policy</a></li>
             <li><a href="#">affiliate program</a></li>
           </ul>
         </div>
@@ -118,7 +121,8 @@
     </div>
     <p>&copy;2025 GamersPlace. All rights reserved.</p>
   </footer>
-  
+
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
