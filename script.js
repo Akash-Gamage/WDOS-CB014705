@@ -21,7 +21,7 @@ function removeFromCart(index) {
   updateCart();
 }
 
-// ========== UPDATE CART TABLE ==========
+// ========== UPDATE CART (items.html) ==========
 function updateCart() {
   const tbody = document.getElementById("order-table-body");
   if (!tbody) return;
@@ -32,12 +32,13 @@ function updateCart() {
   cart.forEach((item, index) => {
     const subtotal = item.price * item.quantity;
     total += subtotal;
+
     const row = document.createElement("tr");
     row.innerHTML = `
-      <td>${item.name}</td>
-      <td>${item.quantity}</td>
-      <td>Rs. ${subtotal.toLocaleString()}</td>
-      <td><button onclick="removeFromCart(${index})">❌</button></td>
+      <td data-label="Item">${item.name}</td>
+      <td data-label="Qty">${item.quantity}</td>
+      <td data-label="Price">Rs. ${subtotal.toLocaleString()}</td>
+      <td data-label="Remove"><button onclick="removeFromCart(${index})">❌</button></td>
     `;
     tbody.appendChild(row);
   });
@@ -69,10 +70,27 @@ function loadFromFavourites() {
   updateCart();
 }
 
-// ========== FAVOURITES PAGE DISPLAY ==========
+// ========== APPLY & CLEAR FAVOURITES ==========
+function applyFavourite() {
+  const fav = localStorage.getItem("favouriteCart");
+  if (fav) {
+    localStorage.setItem("cart", fav);
+    alert("Favourite order applied to your cart!");
+    window.location.href = "items.html";
+  }
+}
+
+function clearFavourite() {
+  localStorage.removeItem("favouriteCart");
+  alert("Favourite order cleared.");
+  location.reload();
+}
+
+// ========== DOM READY ==========
 document.addEventListener("DOMContentLoaded", () => {
   updateCart();
 
+  // Favourites Page Display
   const favTable = document.getElementById("favourite-table");
   const favEmpty = document.getElementById("favourite-empty");
   const favButtons = document.getElementById("favourite-buttons");
@@ -96,9 +114,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const row = document.createElement("tr");
       row.innerHTML = `
-        <td>${item.name}</td>
-        <td>${item.quantity}</td>
-        <td>Rs. ${subtotal.toLocaleString()}</td>
+        <td data-label="Item">${item.name}</td>
+        <td data-label="Qty">${item.quantity}</td>
+        <td data-label="Price">Rs. ${subtotal.toLocaleString()}</td>
       `;
       tbody.appendChild(row);
     });
@@ -108,39 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
     favButtons.style.display = "block";
   }
 
-  const checkoutForm = document.getElementById("checkoutForm");
-  if (checkoutForm) {
-    checkoutForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const deliveryDate = new Date();
-      deliveryDate.setDate(deliveryDate.getDate() + 3);
-      document.getElementById("delivery-date").textContent = deliveryDate.toDateString();
-
-      checkoutForm.style.display = "none";
-      document.getElementById("confirmation").style.display = "block";
-    });
-  }
-});
-
-// ========== APPLY & CLEAR FAVOURITES ==========
-function applyFavourite() {
-  const fav = localStorage.getItem("favouriteCart");
-  if (fav) {
-    localStorage.setItem("cart", fav);
-    alert("Favourite order applied to your cart!");
-    window.location.href = "items.html"; // <-- FIXED from index.html
-  }
-}
-
-function clearFavourite() {
-  localStorage.removeItem("favouriteCart");
-  alert("Favourite order cleared.");
-  location.reload();
-}
-
-
-// ========== DISPLAY ORDER SUMMARY ON CART PAGE ==========
-document.addEventListener("DOMContentLoaded", () => {
+  // Cart Summary Page (cart.html)
   const summaryTable = document.getElementById("summary-table");
   const totalSummary = document.getElementById("summary-total");
 
@@ -154,13 +140,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const row = document.createElement("tr");
       row.innerHTML = `
-        <td>${item.name}</td>
-        <td>${item.quantity}</td>
-        <td>Rs. ${subtotal.toLocaleString()}</td>
+        <td data-label="Item">${item.name}</td>
+        <td data-label="Qty">${item.quantity}</td>
+        <td data-label="Price">Rs. ${subtotal.toLocaleString()}</td>
       `;
       summaryTable.appendChild(row);
     });
 
     totalSummary.textContent = `Rs. ${total.toLocaleString()}`;
+  }
+
+  // Checkout Form Handler
+  const checkoutForm = document.getElementById("checkoutForm");
+  if (checkoutForm) {
+    checkoutForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const deliveryDate = new Date();
+      deliveryDate.setDate(deliveryDate.getDate() + 3);
+      document.getElementById("delivery-date").textContent = deliveryDate.toDateString();
+
+      checkoutForm.style.display = "none";
+      document.getElementById("confirmation").style.display = "block";
+    });
   }
 });
