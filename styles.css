@@ -53,14 +53,14 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
-  background-color: white;
+  background-color: black;
   border-radius: 8px;
   overflow: hidden;
 }
 
 thead {
   background-color: #4caf50;
-  color: white;
+  color: black;
 }
 
 th, td {
@@ -71,12 +71,12 @@ th, td {
 
 tfoot td {
   font-weight: bold;
-  background-color: #f0f0f0;
+  background-color: black;
 }
 
 button {
   padding: 10px 20px;
-  background-color: #2e7d32;
+  background-color: ;
   color: white;
   border: none;
   border-radius: 5px;
@@ -98,7 +98,7 @@ button:hover {
 }
 
 #checkoutForm button {
-  background-color: #009688;
+  background-color: #black;
 }
 
 #confirmation {
